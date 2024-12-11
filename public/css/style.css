@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+:root {
+  --theme-color: #76510d; /* Light orange color */
+  --secondary-color: #f5ba61; /* Lighter shade of orange */
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fff8e1; /* Light background for a warm feel */
+  overflow-x: hidden;
+}
+
+header {
+  color: white;
+  background-color: var(--theme-color);
+  font-size: 20px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.color-theme {
+  color: var(--theme-color);
+}
+
+.bg-image-container {
+  min-height: calc(100vh - 45px);
+  background: url("/assets/images/library.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
+  padding: 50px;
+  background: rgba(154, 106, 15, 0.435); /* Semi-transparent background */
+  border-radius: 2px; /* Rounded corners */
+}
+
+#welcome-container div {
+  color: rgb(44, 65, 1);
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px; /* Add text shadow */
+}
+
+.form-container {
+  width: 500px;
+  max-width: 100vw;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.13), -2px 2px 4px rgba(0, 0, 0, 0.11);
+  background: white;
+  border-radius: 10px; 
+  padding: 20px;
+  margin: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: var(--theme-color);
+  border: 2px solid var(--theme-color);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: var(--theme-color);
+  background: var(--secondary-color);
+  font-weight: bold;
+  border-color: var(--secondary-color);
+}
+
+.btn-cancel {
+  background-color: #ffcc00;
+  border: 2px solid #ffcc00;
+}
+
+.btn-cancel:hover {
+  color: black;
+}
+
+.form-title {
+  padding: 10px;
+  color: var(--theme-color);
+  text-align: center;
+  font-size: 24px;
+}
+
+input.form-control,
+textarea.form-control {
+  border: 1px solid #ddd9d9;
+  background-color: #fcfcfc;
+  box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.12),
+    0px 1.6px 3.6px rgba(0, 0, 0, 0.12);
+  border-radius: 4px; 
+}
+
+input.form-control:hover,
+textarea.form-control:hover {
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0);
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+  transition: 0.3s;
+  border: 1px solid var(--theme-color);
+}
+
+.text-issued {
+  color: #1fa64e !important;
+}
+
+.text-overdue {
+  color: #e22a2a !important;
+}
+
+.text-returned {
+  color: #0000ff !important;
+}
+
+.activity-item {
+  color: #0000ff !important;
+}
+
+.alerts-wrapper {
+  position: absolute;
+  right: 0px;
+  width: fit-content;
+  font-weight: bold;
+  animation: moveLeft 0.1s linear;
+  z-index: 100;
+}
+
+.alerts-wrapper .alert-danger {
+  color: white;
+  background-color: #e22a2a;
+}
+
+.alerts-wrapper .alert-success {
+  color: white;
+  background-color: #1fa64e;
+}
+
+@keyframes moveLeft {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 0px;
+  }
+}
